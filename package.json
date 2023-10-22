@@ -1,8 +1,8 @@
 {
-  "name": "rehype-empty-comment",
+  "name": "rehype-remove-comment",
   "version": "0.0.0",
   "description": "Rehype plugin to remove comments from the hast.",
-  "main": "dist/index.js",
+  "main": "lib/index.mjs",
   "type": "module",
   "exports": {
     "import": "./lib/index.mjs",
