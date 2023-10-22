@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "lib": ["esnext"],
+    "module": "esnext",
+    "moduleResolution": "nodenext",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext"
+  }
+}

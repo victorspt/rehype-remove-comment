@@ -1,0 +1,9 @@
+# Installed packages:
+node_modules/
+
+# Built files:
+lib/
+
+# Vim files:
+.*.sw[a-z]
+*~

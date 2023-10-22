@@ -1,0 +1,28 @@
+{
+  "env": {
+    "node": true,
+    "es2023": true,
+    "jest/globals": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "extends": ["prettier"]
+    },
+    {
+      "files": ["*.ts"],
+      "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"]
+    },
+    {
+      "files": ["test/**"],
+      "extends": ["plugin:jest/recommended", "prettier"],
+      "plugins": ["jest"]
+    }
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
