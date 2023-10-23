@@ -4,5 +4,18 @@
       "@babel/preset-typescript",
       { "onlyRemoveTypeImports": true, "rewriteImportExtensions": true }
     ]
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-typescript",
+          { "onlyRemoveTypeImports": true, "rewriteImportExtensions": false }
+        ]
+      ]
+    }
+  },
+  "targets": {
+    "node": "16.0"
+  }
 }
