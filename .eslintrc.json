@@ -17,7 +17,7 @@
       "plugins": ["@typescript-eslint"]
     },
     {
-      "files": ["test/**"],
+      "files": ["**/__tests__/**"],
       "extends": ["plugin:jest/recommended", "prettier"],
       "plugins": ["jest"]
     }
