@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The rehype-remove-comment plugin removes HTML comments from the md file 1`] = `
+"/*@jsxRuntime automatic @jsxImportSource react*/
+const {Fragment: _Fragment, jsx: _jsx, jsxs: _jsxs} = arguments[0];
+const {useMDXComponents: _provideComponents} = arguments[0];
+function _createMdxContent(props) {
+  const _components = Object.assign({
+    hr: "hr",
+    h2: "h2",
+    h1: "h1",
+    p: "p",
+    code: "code",
+    section: "section",
+    ul: "ul",
+    li: "li",
+    table: "table",
+    tbody: "tbody",
+    tr: "tr",
+    td: "td",
+    a: "a"
+  }, _provideComponents(), props.components);
+  return _jsxs(_Fragment, {
+    children: [_jsx(_components.hr, {}), "\\n", _jsx(_components.h2, {
+      children: "title: Test Title\\nlayout: testLayout.hbs"
+    }), "\\n", "\\n", "\\n", _jsx(_components.hr, {}), "\\n", _jsx(_components.h1, {
+      children: "Level-1 heading"
+    }), "\\n", _jsx(_components.h2, {
+      children: "Level-2 heading"
+    }), "\\n", _jsxs(_components.p, {
+      children: ["Markdown paragraph. Testing ", _jsx(_components.code, {
+        children: "inline code"
+      }), "."]
+    }), "\\n", _jsxs(_components.section, {
+      className: "note",
+      children: ["\\n### Level-3 heading inside HTML\\n  ", _jsx(_components.p, {
+        children: "Paragraph inside <section>"
+      }), "\\n"]
+    }), "\\n", "\\n", _jsx(_components.p, {
+      children: "-->"
+    }), "\\n", _jsx(_components.h2, {
+      children: "Level-2 heading"
+    }), "\\n", _jsx(_components.p, {
+      children: "Markdown Paragraph."
+    }), "\\n", _jsxs(_components.ul, {
+      children: ["\\n", _jsx(_components.li, {
+        children: "Markdown list item 1."
+      }), "\\n", _jsx(_components.li, {
+        children: "Markdown list item 2."
+      }), "\\n", _jsx(_components.li, {
+        children: "Markdown list item 3."
+      }), "\\n", _jsx(_components.li, {
+        children: "Markdown list item 4."
+      }), "\\n"]
+    }), "\\n", _jsxs(_components.table, {
+      className: "table-test",
+      children: ["\\n  ", _jsx(_components.tbody, {
+        children: _jsxs(_components.tr, {
+          children: ["\\n    ", _jsx(_components.td, {
+            children: "HTML table cell."
+          }), "\\n  "]
+        })
+      })]
+    }), "\\n", "\\n", _jsx(_components.p, {
+      children: _jsx(_components.a, {
+        href: "https://example.com",
+        children: "Markdown link"
+      })
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = Object.assign({}, _provideComponents(), props.components);
+  return MDXLayout ? _jsx(MDXLayout, Object.assign({}, props, {
+    children: _jsx(_createMdxContent, props)
+  })) : _createMdxContent(props);
+}
+return {
+  default: MDXContent
+};
+"
+`;
+
+exports[`The rehype-remove-comment plugin when not applied preserve the HTML comments in the md file 1`] = `
+"/*@jsxRuntime automatic @jsxImportSource react*/
+/*HTML comment.*/
+/*
+
+Multiline HTML comment.
+
+Testing.
+
+Testing more.
+
+*/
+/*
+HTML multiline comment.
+
+\`\`\`javascript
+import { numbersUrl } from './constants.js';
+import { mapNumber, isValid } from './functions.js';
+
+// Javascript line comment inside HTML multiline comment. "Test."
+
+/**
+* Javascript JSdoc inside HTML comment.
+*/
+async function getResult() {
+const response = await fetch(numbersUrl);
+const numbers = await response.json();
+const result = numbers
+.map(mapNumber)
+.reduce((accu /* Javascript inline comment. */, curr) => {
+return (isValid\`\${curr}\`) ? accu + curr : accu;
+});
+return result;
+}
+\`\`\`
+
+\`\`\`python
+from db import db
+
+# Python line comment inside HTML comment.
+
+def sendNumbers():
+"""
+Python multiline comment inside HTML comment.
+Testing.
+"""
+return db.getNumbers()
+\`\`\`
+
+<!-- HTML line comment inside an HTML multiline comment.*/
+/*HTML comment.*/
+const {Fragment: _Fragment, jsx: _jsx, jsxs: _jsxs} = arguments[0];
+const {useMDXComponents: _provideComponents} = arguments[0];
+function _createMdxContent(props) {
+  const _components = Object.assign({
+    hr: "hr",
+    h2: "h2",
+    h1: "h1",
+    p: "p",
+    code: "code",
+    section: "section",
+    ul: "ul",
+    li: "li",
+    table: "table",
+    tbody: "tbody",
+    tr: "tr",
+    td: "td",
+    a: "a"
+  }, _provideComponents(), props.components);
+  return _jsxs(_Fragment, {
+    children: [_jsx(_components.hr, {}), "\\n", _jsx(_components.h2, {
+      children: "title: Test Title\\nlayout: testLayout.hbs"
+    }), "\\n", "\\n", "\\n", _jsx(_components.hr, {}), "\\n", _jsx(_components.h1, {
+      children: "Level-1 heading"
+    }), "\\n", _jsx(_components.h2, {
+      children: "Level-2 heading"
+    }), "\\n", _jsxs(_components.p, {
+      children: ["Markdown paragraph. Testing ", _jsx(_components.code, {
+        children: "inline code"
+      }), "."]
+    }), "\\n", _jsxs(_components.section, {
+      className: "note",
+      children: ["\\n### Level-3 heading inside HTML\\n  ", _jsx(_components.p, {
+        children: "Paragraph inside <section>"
+      }), "\\n"]
+    }), "\\n", "\\n", _jsx(_components.p, {
+      children: "-->"
+    }), "\\n", _jsx(_components.h2, {
+      children: "Level-2 heading"
+    }), "\\n", _jsx(_components.p, {
+      children: "Markdown Paragraph."
+    }), "\\n", _jsxs(_components.ul, {
+      children: ["\\n", _jsx(_components.li, {
+        children: "Markdown list item 1."
+      }), "\\n", _jsx(_components.li, {
+        children: "Markdown list item 2."
+      }), "\\n", _jsx(_components.li, {
+        children: "Markdown list item 3."
+      }), "\\n", _jsx(_components.li, {
+        children: "Markdown list item 4."
+      }), "\\n"]
+    }), "\\n", _jsxs(_components.table, {
+      className: "table-test",
+      children: ["\\n  ", _jsx(_components.tbody, {
+        children: _jsxs(_components.tr, {
+          children: ["\\n    ", _jsx(_components.td, {
+            children: "HTML table cell."
+          }), "\\n  "]
+        })
+      })]
+    }), "\\n", "\\n", _jsx(_components.p, {
+      children: _jsx(_components.a, {
+        href: "https://example.com",
+        children: "Markdown link"
+      })
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = Object.assign({}, _provideComponents(), props.components);
+  return MDXLayout ? _jsx(MDXLayout, Object.assign({}, props, {
+    children: _jsx(_createMdxContent, props)
+  })) : _createMdxContent(props);
+}
+return {
+  default: MDXContent
+};
+"
+`;
