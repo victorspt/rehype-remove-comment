@@ -28,6 +28,7 @@ const cjsConfig = {
           use: {
             loader: 'babel-loader',
             options: {
+              cacheDirectory: true,
               presets: ['@babel/preset-env'],
               targets: {
                 node: '16.0',
@@ -66,6 +67,9 @@ const esmConfig = {
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+            },
           },
         },
       ],
