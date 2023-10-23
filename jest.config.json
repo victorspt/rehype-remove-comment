@@ -1,0 +1,8 @@
+{
+  "extensionsToTreatAsEsm": [".ts"],
+  "moduleDirectories": ["node_modules", "<rootDir>/node_modules"],
+  "modulePaths": ["node_modules", "<rootDir>/node_modules"],
+  "transform": {
+    "^.+\\.(j|t)s$": "babel-jest"
+  }
+}
