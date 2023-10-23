@@ -11,6 +11,7 @@ const commonConfig = {
   resolve: {
     extensions: ['.js', '.ts'],
   },
+  target: ['node16.0'],
 };
 
 const cjsConfig = {
@@ -46,7 +47,6 @@ const cjsConfig = {
       },
       path: path.resolve(dirname, 'lib'),
     },
-    target: ['node16.0'],
   },
 };
 
