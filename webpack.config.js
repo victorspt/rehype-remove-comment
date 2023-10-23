@@ -1,5 +1,6 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import CopyPlugin from 'copy-webpack-plugin';
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -82,4 +83,23 @@ const esmConfig = {
   },
 };
 
-export default [cjsConfig, esmConfig];
+const typesConfig = {
+  name: 'types',
+  entry: {},
+  output: {
+    path: path.resolve(dirname, 'lib'),
+  },
+  mode: 'production',
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(dirname, 'src', 'index.d.ts'),
+          to: path.resolve(dirname, 'lib', 'index.d.ts'),
+        },
+      ],
+    }),
+  ],
+};
+
+export default [cjsConfig, esmConfig, typesConfig];

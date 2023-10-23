@@ -8,12 +8,14 @@
     "import": "./lib/index.mjs",
     "require": "./lib/index.cjs"
   },
+  "types": "./lib/index.d.ts",
   "engines": {
     "node": ">=16.0"
   },
   "files": [
     "lib/index.cjs",
     "lib/index.mjs",
+    "lib/index.d.ts",
     "package.json",
     "README.md",
     "LICENSE"
@@ -49,6 +51,7 @@
     "@typescript-eslint/parser": "^6.8.0",
     "babel-jest": "^29.7.0",
     "babel-loader": "^9.1.3",
+    "copy-webpack-plugin": "^11.0.0",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-jest": "^27.4.2",
